@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WhitelineStyle Stammkunden</title>
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>WhitelineStyle Stammkunden</h1>
+    <h3 class="h3CustomHeader1">Suchen</h3>
+    <form class="search" action="index.html" method="get">
+      <input type="text" name="search_input" Placeholder="Name, Artikel, Preis">
+      <input type="submit" value="Suchen">
+    </form>
+    <h3 class="h3CustomHeader1">Hinzufügen</h3>
+    <form class="hinzufuegen" action="hinzufuegen.html" method="get">
+      <input type="text" name="personName" placeholder="Name">
+      <input type="text" name="artikelName" placeholder="Artikelname">
+      <input type="number" name="anzahl" placeholder="Anzahl" min=0>
+      <input type="number" name="preis" placeholder="Preis" min=0.01 step=0.01><span class="input_number_symbol">€</span>
+      <input type="submit" value="Hinzufügen">
+    </form>
+    <h3 class="h3CustomHeader1">Sortieren</h3>
+    <div class="linkCollection">
+      <a href="index.html?sort=all">Alle</a>
+      <a href="index.html?sort=open">Offen</a>
+      <a href="index.html?sort=closed">Geschlossen</a>
+    <div>
+  </body>
+</html>

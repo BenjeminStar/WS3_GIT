@@ -1,0 +1,8 @@
+@font-face {
+  /* Using for Text or something */
+  font-family: "TitilliumWeb";
+  src: url("../fonts/TitilliumWeb-Regular.ttf"); }
+
+  :root{
+    --standard: "TitilliumWeb";
+  }
