@@ -1,5 +1,11 @@
 window.onload = () => {
 console.log("JS loaded...");
+//datas ist in einer anderen Datei geschrieben, undzwar in der "../json/database.json"-File
+console.log(datas);
+var datasArray = [];
+datas.forEach(function(value){
+
+});
 class Object{
   constructor(id, name, artikelname, anzahl, preis, erledigt){
     this.id = id;
@@ -71,7 +77,7 @@ TabellenWerte.forEach(function(Object){
   } else if(findGetParameter("search_input")){
     var inside = [];
     SearchValues.forEach(function(Value){
-      if((Object.getId().toString().includes(Value) || Object.getName().includes(Value) || Object.getArtikelname().includes(Value) || Object.getAnzahl().toString().includes(Value) || Object.getPreis().toString().includes(Value)) && !inside.includes(Object.getId())){
+      if((Object.getId().toString().toLowerCase().includes(Value) || Object.getName().toLowerCase().includes(Value) || Object.getArtikelname().toLowerCase().includes(Value) || Object.getAnzahl().toString().toLowerCase().includes(Value) || Object.getPreis().toString().toLowerCase().includes(Value)) && !inside.includes(Object.getId())){
         inside.push(Object.getId());
         var erledigt = "";
         if(Object.getErledigt())

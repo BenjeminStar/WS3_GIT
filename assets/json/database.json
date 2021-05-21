@@ -1,0 +1,18 @@
+[
+	{
+		"id": 0,
+  	"name": "Harry Potter",
+    "artikelName": "T-Shirt 160A BlauGrün M",
+    "anzahl": 1,
+    "preis": 50,
+    "erledigt": false
+  },
+  {
+		"id":1,
+  	"name": "Luna Lovegood",
+    "artikelName": "Hose 115B Blau S",
+    "anzahl": 1,
+    "preis": 23.99,
+    "erledigt": true
+  }
+]
