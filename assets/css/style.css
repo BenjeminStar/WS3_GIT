@@ -70,7 +70,7 @@ a:hover{
   cursor: text !important;
 }
 textarea.input_text{
-  height: 20px;
+  height:20px;
   min-height: 20px !important;
   transform: translateY(8px);
   padding: .5em;

@@ -50,6 +50,7 @@
       <table>
         <tr>
           <th>Id</th>
+          <th>Datum</th>
           <th>Name</th>
           <th class="length300">Beschreibung</th>
           <th>Anzahl</th>
@@ -57,6 +58,7 @@
           <th>Erledigt</th>
           <th>Bearbeiten</th>
           <th>Schließen</th>
+          <th>Zuletzt geändert</th>
         </tr>
         <?php
         console::log($db);
@@ -92,11 +94,17 @@
           echo "
           <tr>
             <td>{$value["id"]}</td>
+            <td>{$value["erstellt"]}</td>
             <td>{$value["name"]}</td>
             <td class='length300'>{$value["beschreibung"]}</td>
             <td>{$value["anzahl"]}</td>
             <td>{$value["preis"]}</td>
-            <td>{$erledigt}</td>
+            <td ";
+            if($value["erledigt"])
+              echo "style='color:var(--success_dark)'";
+            else
+              echo "style='color:var(--danger)'";
+            echo ">{$erledigt}</td>
             <td><a href='assets/php/edit.php?id={$value["id"]}' class='edButton_{$value["id"]}'>Bearbeiten</a></td>
             ";
             if(!$value["erledigt"])
@@ -104,6 +112,7 @@
             else
               echo "<td><a class='closeButton_{$value["id"]} linkDisabled'>Schließen</a></td>";
             echo "
+            <td>{$value["lastChange"]}</td>
           </tr>
           ";
         }
