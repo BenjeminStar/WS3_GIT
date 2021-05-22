@@ -30,11 +30,11 @@
     </form>
     <h3 class="h3CustomHeader1">Hinzufügen</h3>
     <form class="hinzufuegen" action="assets/php/add.php" method="post">
-      <input type="text" name="personName" placeholder="Name">
-      <textarea name="beschreibung" placeholder="Beschreibung" class="input_text"></textarea>
-      <input type="number" name="anzahl" placeholder="Anzahl" min=0>
-      <input type="number" name="preis" placeholder="Preis" min=0 step=0.01><span class="input_number_symbol">€</span>
-      <input type="submit" value="Hinzufügen">
+      <input type="text" name="personName" placeholder="Name" class="input_class">
+      <textarea name="beschreibung" placeholder="Beschreibung" class="input_text input_class"></textarea>
+      <input type="number" name="anzahl" placeholder="Anzahl" min=0 class="input_class">
+      <input type="number" name="preis" placeholder="Preis" min=0 step=0.01 class="input_class"><span class="input_class input_number_symbol">€</span>
+      <input type="submit" value="Hinzufügen" class="input_class">
     </form>
     <h3 class="h3CustomHeader1">Sortieren</h3>
     <div class="linkCollection">
