@@ -1,7 +1,6 @@
 <?php
 $key = "THISISKKEY";
 if(isset($_GET["key"]) and $_GET["key"] == $key){
-  include("console.php");
   include("jsonClass.php");
   $database = new jsonClass("../json/database.json");
   $dbJson = $database->getJsonArray();
