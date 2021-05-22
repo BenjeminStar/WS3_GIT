@@ -10,7 +10,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Whiteline Style 3 - Stammkunden</title>
+    <title>Whiteline Style 3 - Buchführung</title>
     <link rel="stylesheet" href="assets/css/colors.css<?php echo "?".date("dmYHis"); ?>">
     <link rel="stylesheet" href="assets/css/fonts.css<?php echo "?".date("dmYHis"); ?>">
     <link rel="stylesheet" href="assets/css/style.css<?php echo "?".date("dmYHis"); ?>">
@@ -22,7 +22,7 @@
      echo (isset($_GET["msg"]) && $_GET["msg"] == "success") ? "<div class='msg success'>Erfolgreich eingetragen.</div>" : "";
      echo (isset($_GET["msg"]) && $_GET["msg"] == "fail") ? "<div class='msg fail'>Konnte nicht eingetragen werden.</div>" : "";
     ?>
-    <h1>Whiteline Style 3 - Stammkunden</h1>
+    <h1>Whiteline Style 3 - Buchführung</h1>
     <h3 class="h3CustomHeader1">Suchen</h3>
     <form class="search" action="index.php" method="get">
       <input type="text" name="search_input" Placeholder="Name, Artikel, Preis, ...">
