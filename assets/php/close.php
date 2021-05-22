@@ -8,6 +8,7 @@ if(isset($_GET["key"]) and $_GET["key"] == $key){
 
   $searchedId = $_GET["id"];
   $dbJson[$searchedId]["erledigt"] = true;
+  $dbJson[$searchedId]["lastChange"] = date("d.m.Y H:i:s");
   if($database->setJsonArray($dbJson)){
     echo "<script>window.location = '../../index.php?msg=success';</script>";
   } else {

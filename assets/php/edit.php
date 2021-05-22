@@ -17,7 +17,8 @@ if(isset($_GET["method"]) and $_GET["method"] == "einfuegen"){
   $preis = $_POST["preis"];
   $erledigt = isset($_POST["erledigt"]) ? true : false;
   $beschreibung = str_replace("\r\n", "<br/>", $beschreibung);
-  $array = ["id"=>$id, "name"=>$name, "beschreibung"=>$beschreibung, "anzahl"=>$anzahl, "preis"=>$preis, "erledigt"=>$erledigt];
+  $zuletztGeaendert = date("d.m.Y H:i:s");
+  $array = ["id"=>$id, "erstellt"=>$dbJson[$id]["erstellt"], "name"=>$name, "beschreibung"=>$beschreibung, "anzahl"=>$anzahl, "preis"=>$preis, "erledigt"=>$erledigt, "lastChange"=>$zuletztGeaendert];
   $dbJson[$id] = $array;
   /**/
   if($database->setJsonArray($dbJson)){
@@ -56,7 +57,7 @@ if(isset($_GET["method"]) and $_GET["method"] == "einfuegen"){
       Preis:<br/>
       <input type="number" name="preis" value="<?php echo $dbJson[$searchedId]["preis"]; ?>" min=0 step=0.01 data-header="Preis">
       <br/>
-      <input type="checkbox" name="erledigt" <?php echo (isset($dbJson[$searchedId]["erledigt"]) and $dbJson[$searchedId]["erledigt"]) ? "checked" : ""; ?>> Erledigt
+      <input type="checkbox" name="erledigt" <?php echo (isset($dbJson[$searchedId]["erledigt"]) and $dbJson[$searchedId]["erledigt"]) ? "checked" : ""; ?>> Schließen
       <br/>
       <input type="submit" value="Ändern">
     </form>

@@ -18,9 +18,10 @@ $beschreibung = isset($_POST["beschreibung"]) ? $_POST["beschreibung"] : "Keine 
 $anzahl = isset($_POST["anzahl"]) ? $_POST["anzahl"] : 1;
 $preis = isset($_POST["preis"]) ? $_POST["preis"] : 0;
 $erledigt = false;
-
+$created = date("d.m.Y");
+$date = date("d.m.Y H:i:s");
 //Ausgelesene Werte in das Array eintragen und in der Datenbank speichern
-$neuerEintrag = ["id"=>$id, "name"=>$name, "beschreibung"=>$beschreibung, "anzahl"=>$anzahl, "preis"=>$preis, "erledigt"=>$erledigt];
+$neuerEintrag = ["id"=>$id, "erstellt"=>$created,"name"=>$name, "beschreibung"=>$beschreibung, "anzahl"=>$anzahl, "preis"=>$preis, "erledigt"=>$erledigt, "lastChange"=>$date];
 array_push($dbJson, $neuerEintrag);
 
 if($database->setJsonArray($dbJson)){
