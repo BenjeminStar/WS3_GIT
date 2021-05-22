@@ -22,7 +22,7 @@
      echo (isset($_GET["msg"]) && $_GET["msg"] == "success") ? "<div class='msg success'>Erfolgreich eingetragen.</div>" : "";
      echo (isset($_GET["msg"]) && $_GET["msg"] == "fail") ? "<div class='msg fail'>Konnte nicht eingetragen werden.</div>" : "";
     ?>
-    <h1>WhitelineStyle Stammkunden</h1>
+    <h1>Whiteline Style 3 - Stammkunden</h1>
     <h3 class="h3CustomHeader1">Suchen</h3>
     <form class="search" action="index.php" method="get">
       <input type="text" name="search_input" Placeholder="Name, Artikel, Preis, ...">
