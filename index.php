@@ -10,7 +10,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WhitelineStyle Stammkunden</title>
+    <title>Whiteline Style 3 - Stammkunden</title>
     <link rel="stylesheet" href="assets/css/colors.css<?php echo "?".date("dmYHis"); ?>">
     <link rel="stylesheet" href="assets/css/fonts.css<?php echo "?".date("dmYHis"); ?>">
     <link rel="stylesheet" href="assets/css/style.css<?php echo "?".date("dmYHis"); ?>">
