@@ -39,6 +39,7 @@ if(isset($_GET["method"]) and $_GET["method"] == "einfuegen"){
     <link rel="stylesheet" href="../css/style_edit.css<?php echo "?".date("dmYHis"); ?>">
   </head>
   <body>
+    <div style=" padding: .5em; "><a href="../../index.php" style="color:var(--light); font-size: 14pt; text-decoration:none; padding:.5em; border:2px solid var(--light);">Zurück</a></div>
     <h3>Bearbeiten</h3>
     <form class="bearbeiten_form" action="edit.php?method=einfuegen" method="post">
       Id: <br/>

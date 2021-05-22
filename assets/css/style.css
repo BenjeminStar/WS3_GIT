@@ -39,6 +39,9 @@ table{
 tr:nth-child(even){
   background: var(--table-even-row);
 }
+th{
+  text-align: left;
+}
 tr, td, th{
   border: none;
   border-bottom: 1px solid var(--table-even-row-border);
