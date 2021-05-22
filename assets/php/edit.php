@@ -1,5 +1,4 @@
 <?php
-include("console.php");
 include("jsonClass.php");
 $database = new jsonClass("../json/database.json");
 $dbJson = $database->getJsonArray();

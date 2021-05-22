@@ -1,5 +1,4 @@
 <?php
-  include("assets/php/console.php");
   include("assets/php/jsonClass.php");
   $database = new jsonClass("assets/json/database.json");
   $db = $database->getJsonArray();
@@ -16,8 +15,6 @@
     <link rel="stylesheet" href="assets/css/fonts.css<?php echo "?".date("dmYHis"); ?>">
     <link rel="stylesheet" href="assets/css/style.css<?php echo "?".date("dmYHis"); ?>">
     <script src="assets/js/msgScript.js" charset="utf-8"></script>
-    <!--<script src="assets/json/database.json" charset="utf-8"></script>
-    <script src="assets/js/script.js" charset="utf-8"></script>-->
   </head>
   <body>
     <div class="content">
@@ -62,7 +59,6 @@
           <th>Zuletzt geändert</th>
         </tr>
         <?php
-        console::log($db);
         //Zuerst überprüfe ich, ob ein Suchkriterium gegeben ist.
         $SearchValues = [];
         if(isset($_GET["search_input"])){
@@ -80,7 +76,6 @@
           } else if(isset($_GET["search_input"])){
             $inside = [];
             foreach ($SearchValues as $key => $SValue) {
-              console::log(str_contains(strtolower(strval($value["name"])), strtolower($SValue)));
               if((str_contains(strtolower(strval($value["id"])), strtolower($SValue)) || str_contains(strtolower(strval($value["name"])), strtolower($SValue)) || str_contains(strtolower(strval($value["beschreibung"])), strtolower($SValue)) || str_contains(strtolower(strval($value["anzahl"])), strtolower($SValue)) || str_contains(strtolower(strval($value["preis"])), strtolower($SValue))) && !in_array($value["id"], $inside)){
                 array_push($inside, $value["id"]);
                 ObjectHinzufuegen($value);
