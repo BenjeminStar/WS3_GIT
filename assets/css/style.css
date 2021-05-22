@@ -34,6 +34,7 @@ body{
 table{
   padding: .5em;
   margin-top: .5em;
+  width:100%;
 }
 tr:nth-child(even){
   background: var(--table-even-row);
