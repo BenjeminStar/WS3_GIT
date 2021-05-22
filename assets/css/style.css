@@ -27,16 +27,20 @@ body{
   border-color: var(--danger);
   background: var(--danger_dark);
 }
+.content{
+  width: 75%;
+  margin: 0 auto;
+}
 table{
-  border: 2px solid var(--light);
   padding: .5em;
   margin-top: .5em;
 }
-
+tr:nth-child(even){
+  background: var(--table-even-row);
+}
 tr, td, th{
-  border: 1px solid var(--light);
-  border-left: none;
-  border-right: none;
+  border: none;
+  border-bottom: 1px solid var(--table-even-row-border);
   padding: .5em;
 }
 .length300{

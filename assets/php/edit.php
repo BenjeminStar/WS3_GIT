@@ -12,7 +12,7 @@ else
 if(isset($_GET["method"]) and $_GET["method"] == "einfuegen"){
   $id = $_POST["id"];
   $name = $_POST["personName"];
-  $beschreibung = $_POST["beschreibung"];
+  $beschreibung = htmlspecialchars($_POST["beschreibung"]);
   $anzahl = $_POST["anzahl"];
   $preis = $_POST["preis"];
   $erledigt = isset($_POST["erledigt"]) ? true : false;

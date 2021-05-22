@@ -14,7 +14,7 @@ foreach ($dbJson as $key => $value) {
 //Werte aus POST auslesen
 
 $name = isset($_POST["personName"]) ? $_POST["personName"] : "Unbekannt";
-$beschreibung = isset($_POST["beschreibung"]) ? $_POST["beschreibung"] : "Keine Beschreibung vorhanden.";
+$beschreibung = isset($_POST["beschreibung"]) ? htmlspecialchars($_POST["beschreibung"]) : "Keine Beschreibung vorhanden.";
 $anzahl = isset($_POST["anzahl"]) ? $_POST["anzahl"] : 1;
 $preis = isset($_POST["preis"]) ? $_POST["preis"] : 0;
 $erledigt = false;

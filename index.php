@@ -20,6 +20,7 @@
     <script src="assets/js/script.js" charset="utf-8"></script>-->
   </head>
   <body>
+    <div class="content">
     <?php
      echo (isset($_GET["msg"]) && $_GET["msg"] == "success") ? "<div class='msg success'>Erfolgreich eingetragen.</div>" : "";
      echo (isset($_GET["msg"]) && $_GET["msg"] == "fail") ? "<div class='msg fail'>Konnte nicht eingetragen werden.</div>" : "";
@@ -47,7 +48,7 @@
     <?php
       echo isset($_GET["search_input"]) ? "<h4>Alle Such-Ergebnisse für: \"".str_replace("+", " ", $_GET["search_input"])."\"</h4>" : "";
       ?>
-      <table>
+      <table cellpadding="0" cellspacing="0">
         <tr>
           <th>Id</th>
           <th>Datum</th>
@@ -66,7 +67,6 @@
         $SearchValues = [];
         if(isset($_GET["search_input"])){
           $SearchValues = explode(" ", str_replace("+", " ", $_GET["search_input"]));
-          console::log($SearchValues);
         }
 
         foreach($db as $key => $value){
@@ -118,5 +118,6 @@
         }
         ?>
       </table>
+    </div>
   </body>
 </html>
