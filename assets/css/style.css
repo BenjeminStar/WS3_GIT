@@ -83,7 +83,7 @@ textarea.input_text{
   min-width: 300px !important;
   word-wrap: break-word;
 }
-.input{
+.input_class{
   display: block;
 }
 input[type=text], input[type=number], .input_text{
