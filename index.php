@@ -76,7 +76,7 @@
           } else if(isset($_GET["search_input"])){
             $inside = [];
             foreach ($SearchValues as $key => $SValue) {
-              if((str_contains(strtolower(strval($value["id"])), strtolower($SValue)) || str_contains(strtolower(strval($value["name"])), strtolower($SValue)) || str_contains(strtolower(strval($value["beschreibung"])), strtolower($SValue)) || str_contains(strtolower(strval($value["anzahl"])), strtolower($SValue)) || str_contains(strtolower(strval($value["preis"])), strtolower($SValue))) && !in_array($value["id"], $inside)){
+              if((str_contains(strtolower(strval($value["id"])), strtolower($SValue)) || str_contains(strtolower(strval($value["erstellt"])), strtolower($SValue)) || str_contains(strtolower(strval($value["name"])), strtolower($SValue)) || str_contains(strtolower(strval($value["beschreibung"])), strtolower($SValue)) || str_contains(strtolower(strval($value["anzahl"])), strtolower($SValue)) || str_contains(strtolower(strval($value["preis"])), strtolower($SValue))) && !in_array($value["id"], $inside)){
                 array_push($inside, $value["id"]);
                 ObjectHinzufuegen($value);
               }
