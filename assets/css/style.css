@@ -84,6 +84,7 @@ textarea.input_text{
   word-wrap: break-word;
 }
 .input_class{
+  /* Display Block */
   display: block;
 }
 input[type=text], input[type=number], .input_text{
