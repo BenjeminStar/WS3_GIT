@@ -1,0 +1,79 @@
+:root{
+
+}
+*{
+  transition: all ease .3s;
+  font-family: var(--standard);
+  font-size: 14pt;
+}
+body{
+  background: var(--dark);
+  color: var(--light);
+}
+.bearbeiten_form{
+  text-align: left;
+  max-width: 500px;
+  padding: .5em;
+}
+input, .input_text{
+  width: 100%;
+}
+.input_text{
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  max-height: 200px;
+  height: 28px;
+}
+input[type=checkbox]{
+  transform: scale(2);
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  width: auto !important;
+}
+input[type=text], input[type=number], .input_text{
+  border: none;
+  border-bottom: 2px solid var(--light);
+  color: var(--light);
+  background: none;
+  padding: .5em;
+  position: relative;
+  margin-bottom: 1em;
+}
+input[type=number]{
+}
+input[type=text]:focus, input[type=numebr]:focus, .input_text:focus input[type=number]:focus{
+  border-color: var(--info);
+  outline: none;
+}
+input[type=submit]{
+  border: 2px solid var(--light);
+  background: none;
+  padding: .5em;
+  color: var(--light);
+  margin: .5em;
+  width: 100%;
+}
+input[type=submit]:hover{
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--dark);
+  cursor: pointer;
+}
+input[type=submit]:active{
+  background: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+  color: var(--dark);
+  cursor: grabbing;
+}
+/*Mit den nächsten 9 Zeilen entferne ich die Pfeile bei den Input-Boxen mit dem Typ "Number"*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

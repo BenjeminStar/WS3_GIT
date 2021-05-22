@@ -3,12 +3,29 @@
 }
 *{
   font-family:  var(--standard);
+  transition: all ease .3s;
 }
 body{
   background: var(--dark);
   color: var(--light);
   padding: 0;
   margin: 1em;
+}
+.msg{
+  padding: .5em;
+  display: block;
+  margin: .5em;
+  font-size: 16pt;
+  border: 2px solid var(--secondary);
+  background: var(--secondary-dark)
+}
+.msg.success{
+  border-color: var(--success);
+  background: var(--success_dark);
+}
+.msg.fail{
+  border-color: var(--danger);
+  background: var(--danger_dark);
 }
 table{
   border: 2px solid var(--light);
@@ -18,8 +35,15 @@ table{
 
 tr, td, th{
   border: 1px solid var(--light);
+  border-left: none;
+  border-right: none;
   padding: .5em;
 }
+.length300{
+  width: 300px;
+  word-wrap: break-word;
+}
+
 a{
   color: var(--light);
   text-decoration: none;
@@ -36,8 +60,26 @@ a:hover{
   margin: 0;
   margin-top: .5em;
 }
-
-input[type=text], input[type=number]{
+.linkDisabled{
+  color:#777 !important;
+  text-decoration: none !important;
+}
+.linkDisabled:hover{
+  color: #777;
+  text-decoration: none;
+  cursor: text !important;
+}
+textarea.input_text{
+  height: 20px;
+  min-height: 20px !important;
+  transform: translateY(8px);
+  padding: .5em;
+  max-width: 300px !important;
+  max-width: 300px !important;
+  min-width: 300px !important;
+  word-wrap: break-word;
+}
+input[type=text], input[type=number], .input_text{
   border: none;
   border-bottom: 2px solid var(--light);
   color: var(--light);
@@ -48,7 +90,7 @@ input[type=number]{
   width: 100px;
 }
 
-input[type=text]:focus, input[type=number]:focus{
+input[type=text]:focus, .input_text:focus, input[type=number]:focus{
   border-color: var(--info);
   outline: none;
 }
@@ -73,7 +115,7 @@ input[type=submit]:active{
 }
 .input_number_symbol{
   padding: .5em;
-  padding-bottom: calc(.5em - 2px);
+  padding-bottom: calc(.5em - 3px);
   padding-right: 1em;
   font-weight: 900;
   border-bottom: 2px solid var(--light);
